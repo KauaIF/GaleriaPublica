@@ -3,7 +3,7 @@ package mateus.kaua.galeriapublica;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
+//TODO: passo 4
 public class MainActivity extends AppCompatActivity {
 
     @Override
