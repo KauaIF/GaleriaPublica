@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                         setFragment(gridViewFragment);
                         break;
                     case R.id.listViewOp:
-                        mateus.kaua.galeriapublica.ListViewFragment listViewFragment = radaelli.chagas.adami.harian.galeriapublica.ListViewFragment.newInstance();
+                        mateus.kaua.galeriapublica.ListViewFragment listViewFragment = mateus.kaua.galeriapublica.ListViewFragment.newInstance();
                         setFragment(listViewFragment);
                         break;
                 }

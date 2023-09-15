@@ -40,11 +40,11 @@ public class ListViewFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view,savedInstanceState);
         mViewModel = new ViewModelProvider(getActivity()).get(MainViewModel.class);
-        radaelli.chagas.adami.harian.galeriapublica.ListAdapter listAdapter = new radaelli.chagas.adami.harian.galeriapublica.ListAdapter(new radaelli.chagas.adami.harian.galeriapublica.ImageDataComparator());
-        LiveData<PagingData<radaelli.chagas.adami.harian.galeriapublica.ImageData>> liveData = mViewModel.getPageLv();
-        liveData.observe(getViewLifecycleOwner(), new Observer<PagingData<radaelli.chagas.adami.harian.galeriapublica.ImageData>>(){
+        mateus.kaua.galeriapublica.ListAdapter listAdapter = new mateus.kaua.galeriapublica.ListAdapter(new mateus.kaua.galeriapublica.ImageDataComparator());
+        LiveData<PagingData<mateus.kaua.galeriapublica.ImageData>> liveData = mViewModel.getPageLv();
+        liveData.observe(getViewLifecycleOwner(), new Observer<PagingData<mateus.kaua.galeriapublica.ImageData>>(){
             @Override
-            public void onChanged(PagingData<radaelli.chagas.adami.harian.galeriapublica.ImageData> objectPagingData){
+            public void onChanged(PagingData<mateus.kaua.galeriapublica.ImageData> objectPagingData){
                 listAdapter.submitData(getViewLifecycleOwner().getLifecycle(),objectPagingData);
             }
         });

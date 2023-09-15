@@ -23,18 +23,18 @@ public class MainViewModel extends AndroidViewModel {
 
     int navigationOpSelected = R.id.gridViewOp;
 
-    LiveData<PagingData<radaelli.chagas.adami.harian.galeriapublica.ImageData>> pageLv;
+    LiveData<PagingData<mateus.kaua.galeriapublica.ImageData>> pageLv;
 
     public MainViewModel(@NonNull Application application){
         super(application);
         GalleryRepository galleryRepository = new GalleryRepository(application);
         GalleryPagingSource galleryPagingSource = new GalleryPagingSource(galleryRepository);
-        Pager<Integer, radaelli.chagas.adami.harian.galeriapublica.ImageData> pager = new Pager(new PagingConfig(10), () -> galleryPagingSource);
+        Pager<Integer, mateus.kaua.galeriapublica.ImageData> pager = new Pager(new PagingConfig(10), () -> galleryPagingSource);
         CoroutineScope viewModelScope = ViewModelKt.getViewModelScope(this);
         pageLv = PagingLiveData.cachedIn(PagingLiveData.getLiveData(pager), viewModelScope);
     }
 
-    public LiveData<PagingData<radaelli.chagas.adami.harian.galeriapublica.ImageData>> getPageLv(){
+    public LiveData<PagingData<mateus.kaua.galeriapublica.ImageData>> getPageLv(){
         return pageLv;
     }
 

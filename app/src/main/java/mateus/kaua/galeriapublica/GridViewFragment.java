@@ -17,7 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import radaelli.chagas.adami.harian.galeriapublica.util.Util;
+import mateus.kaua.galeriapublica.util.Util;
 
 public class GridViewFragment extends Fragment {
 

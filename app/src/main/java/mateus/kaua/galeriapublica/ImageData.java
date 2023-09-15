@@ -1,4 +1,4 @@
-package radaelli.chagas.adami.harian.galeriapublica;
+package mateus.kaua.galeriapublica;
 
 import android.graphics.Bitmap;
 import android.net.Uri;

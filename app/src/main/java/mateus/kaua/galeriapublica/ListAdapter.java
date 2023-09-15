@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.DiffUtil;
 
 import java.text.SimpleDateFormat;
 
-public class ListAdapter extends PagingDataAdapter<radaelli.chagas.adami.harian.galeriapublica.ImageData,MyViewHolder> {
-    public ListAdapter(@NonNull DiffUtil.ItemCallback<radaelli.chagas.adami.harian.galeriapublica.ImageData> diffCallback){
+public class ListAdapter extends PagingDataAdapter<mateus.kaua.galeriapublica.ImageData,MyViewHolder> {
+    public ListAdapter(@NonNull DiffUtil.ItemCallback<mateus.kaua.galeriapublica.ImageData> diffCallback){
         super(diffCallback);
     }
     @NonNull
@@ -26,7 +26,7 @@ public class ListAdapter extends PagingDataAdapter<radaelli.chagas.adami.harian.
     }
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position){
-        radaelli.chagas.adami.harian.galeriapublica.ImageData imageData = getItem(position);
+        mateus.kaua.galeriapublica.ImageData imageData = getItem(position);
         TextView tvName = holder.itemView.findViewById(R.id.tvName);
         tvName.setText(imageData.fileName);
 
